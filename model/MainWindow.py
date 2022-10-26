@@ -18,23 +18,26 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.lanseazaFormButton.clicked.connect(self.run_form)
 
     def run_form(self):
-        if self.ui.form1.isChecked():
-            MainWindow.hide(self)
-            self.new_window = Form1()
-            self.new_window.show()
-        elif self.ui.form2.isChecked():
-            MainWindow.hide(self)
-            self.new_window = Form2()
-            self.new_window.show()
-        elif self.ui.form3.isChecked():
-            MainWindow.hide(self)
-            self.new_window = Form3()
-            self.new_window.show()
-        elif self.ui.form4.isChecked():
-            MainWindow.hide(self)
-            self.new_window = Form4()
-            self.new_window.show()
-        elif self.ui.form5.isChecked():
-            MainWindow.hide(self)
-            self.new_window = Form5()
-            self.new_window.show()
+        try:
+            if self.ui.form1.isChecked():
+                MainWindow.hide(self)
+                self.new_window = Form1()
+                self.new_window.show()
+            elif self.ui.form2.isChecked():
+                MainWindow.hide(self)
+                self.new_window = Form2()
+                self.new_window.show()
+            elif self.ui.form3.isChecked():
+                MainWindow.hide(self)
+                self.new_window = Form3()
+                self.new_window.show()
+            elif self.ui.form4.isChecked():
+                MainWindow.hide(self)
+                self.new_window = Form4()
+                self.new_window.show()
+            elif self.ui.form5.isChecked():
+                MainWindow.hide(self)
+                self.new_window = Form5()
+                self.new_window.show()
+        except Exception as e:
+            print(e)
