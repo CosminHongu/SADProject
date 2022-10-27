@@ -7,7 +7,7 @@ def get_data():
     file_name = "Superbaza.xls"  # path to file + file name
     sheet = "superstore"  # sheet name or sheet number or list of sheet numbers and names
     df = pd.read_excel(io=file_name, sheet_name=sheet, usecols="A:U")
-
+    # DataFrame (Tabel de date coloane si linii (24 coloane, 10.000 linii)
     dataframe = pd.DataFrame(df)
 
     return dataframe
@@ -15,15 +15,15 @@ def get_data():
 
 def total_sales_by_subCategory():
     dataframe = get_data()
+    # Se selecteaza coloana Sub-Category, Sales, Profit
     df = dataframe[["Sub-Category", "Sales", "Profit"]]
+    # Se grupeaza dupa Sub-Category
     df2 = df.groupby("Sub-Category").sum()
 
     index = df2.index
     sales = df2["Sales"]
     profit = df2["Profit"]
-    # plt.barh(index,sales)
-    # plt.barh(index,profit)
-    # plt.show()
+
     obj = [index, sales, profit]
     return obj
 

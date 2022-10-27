@@ -10,8 +10,6 @@ def get_data():
     dataframe = pd.DataFrame(df)
     return dataframe
 
-    # Evidenta celui mai prost cumparat produs dintr-o subcategorie comparativ cu categoria sa si cu totalul de categorii
-    # Evidenta celui mai prost produs cumparat
 
 
 def get_subcategory():

@@ -52,7 +52,7 @@ def zona_de_distributie(product_name):
 
 def profilul_clientilor(product_name):
     dataframe = get_data()
-    # Se aleg coloanele Segmentt Profit si Product Name
+    # Se aleg coloanele Segment Profit si Product Name
     df = dataframe[["Segment", "Profit", "Product Name"]]
     # Se filtreaza dupa product name
     df2 = df[df["Product Name"] == product_name]
